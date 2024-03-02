@@ -92,3 +92,24 @@ main {
     color: rgba(255, 255, 255, 0.75);
     margin-top: 5px;
 }
+
+/* Responsive design for mobile view */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card:hover {
+        width: 100%;
+    }
+    .card .layer {
+        margin-top: 0;
+    }
+    .card .layer .info {
+        width: 100%;
+    }
+}
