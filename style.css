@@ -88,6 +88,34 @@ main {
 .card:hover .layer .info {
     opacity: 1;
 }
+
+/* Tampilan untuk layar dengan lebar maksimum 600px */
+@media only screen and (max-width: 600px) {
+    body {
+        align-items: flex-start; /* Mengatur item ke atas */
+        padding-top: 20px; /* Menambahkan ruang di atas */
+    }
+
+    body::before {
+        display: none; /* Menyembunyikan gambar latar belakang pada layar mobile */
+    }
+
+    main {
+        width: 100%; /* Mengisi lebar layar */
+        flex-direction: column; /* Mengatur arah tata letak menjadi kolom */
+        align-items: center; /* Pusatkan konten */
+        gap: 20px; /* Menambahkan jarak antar card */
+    }
+
+    .card {
+        width: 100%; /* Mengisi lebar layar */
+    }
+
+    .card .layer .info {
+        width: 80%; /* Mengurangi lebar info */
+    }
+}
+
 .info p {
     color: rgba(255, 255, 255, 0.75);
     margin-top: 5px;
